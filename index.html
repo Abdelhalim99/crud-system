@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="crud">
+    <div class="head">
+      <h2>CRUD</h2>
+      <p>PRODUCTS MANGSMENT SYSTEM</p>
+    </div>
+    <div class="inputs">
+      <input type="text" id="title" placeholder="title" />
+      <div class="price">
+        <input onkeyup=" gettotal()" type="number" id="price" placeholder="price" />
+        <input onkeyup=" gettotal()" type="number" id="taxes" placeholder="taxes" />
+        <input onkeyup=" gettotal()" type="number" id="ads" placeholder="ads" />
+        <input onkeyup=" gettotal()" type="number" id="discount" placeholder="discount" />
+        <small id="total">3265</small>
+      </div>
+      <input type="number" id="count" placeholder="count" />
+      <input type="text" id="category" placeholder="category" />
+      <button id="submit">create</button>
+    </div>
+    <div class="outputs">
+      <div class="searchblock">
+        <input onkeyup="search2(this.value)" type="text" id="search" placeholder="search" />
+        <div class="btnsearch">
+          <button onclick=" search1(this.id)" id="searchtittle">
+            search by tittle
+          </button>
+          <button onclick=" search1(this.id)" id="searchcategory">
+            search by category
+          </button>
+        </div>
+      </div>
+
+      <div id="deleteallbtn"></div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        
+
+        <tbody id="tbdy"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
